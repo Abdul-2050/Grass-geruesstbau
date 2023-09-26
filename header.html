@@ -1,0 +1,112 @@
+<div class="announcement">
+    <div class="marquee-container">
+        <div class="marquee">
+            <div><a href="career.html">Wir suchen Mitarbeiter (m/w/d). Clicke hier um, mehr zu erfahren</a></div>
+            <div><a href="career.html">Wir suchen Mitarbeiter (m/w/d). Clicke hier um, mehr zu erfahren</a></div>
+            <div><a href="career.html">Wir suchen Mitarbeiter (m/w/d). Clicke hier um, mehr zu erfahren</a></div>
+        </div>
+    </div>
+</div>
+
+<style>
+    :root {
+        --marquee-speed: 40s;
+        --marquee-hover-offset: -50px;
+        --marquee-hover-transition-speed: 0.7s;
+        --marquee-fade-edges: 30%;
+    }
+
+    .marquee-container {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    .marquee {
+        display: flex;
+        white-space: nowrap;
+        gap: 30px;
+        animation: animate-marquee var(--marquee-speed) infinite linear;
+        transition: var(--marquee-hover-transition-speed) transform ease-out;
+        will-change: transform;
+    }
+
+    .marquee:hover {
+        animation-play-state: paused;
+        transform: translateX(var(--marquee-hover-offset));
+    }
+
+    @keyframes animate-marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .announcement {
+        padding: 2px 5%;
+        background: var(--primary-header_txt-background); color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+
+    .announcement a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+        font-weight: bold;
+    }
+</style>
+
+
+
+<div class="contact-header"
+    style="  background: var(--primary-header_txt-background);color: rgb(255, 255, 255);">
+    <div class="location align_center">
+        <i class='bx bx-current-location'></i>
+        <p style="padding-left: 10px;"><a href="https://maps.app.goo.gl/nrLL4N9YNTSjrZRw8">Buschhausener Str. 20-30O, 46049 berhausen</a></p>
+    </div>
+
+    <div class="telefone align_center">
+        <i class='bx bx-phone'></i>
+        <p style="padding-left: 10px; "><a href="tel:+49 172 6234577">+49 172 6234577</a></p>
+    </div>
+
+    <style>
+        .contact-header a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</div>
+
+<header>
+
+    <a href="index.html" style="text-decoration: none;">
+        
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img
+            src="LOGO-OHNE-HINTERGRUND-psdu9surazmri5sqddghycllkoe1n04jwg66k4f0mg.png" style="width: 150px;"
+            alt="logo " class="logo" />
+
+            <!-- L. Blaszyk Gerüstbau -->
+        </div>
+    </a>
+
+
+
+    <input type="checkbox" id="check" />
+    <label for="check" class="icons">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-x" id="close-icon"></i>
+    </label>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-item" style="--i: 0">Home</a>
+        <a href="about.html" class="nav-item" style="--i: 1">About</a>
+        <a href="services.html" class="nav-item" style="--i: 2">Services</a>
+        <a href="contact.html" class="nav-item" style="--i: 3">Contact</a>
+    </nav>
+</header>

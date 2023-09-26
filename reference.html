@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="LOGO-OHNE-HINTERGRUND-psdu9surazmri5sqddghycllkoe1n04jwg66k4f0mg.png">
+
+    <title>Refrenzen|  Grass-Geruestbau | Building dreams since 1999</title>
+    <meta property="og:title" content="Grass-Geruestbau">
+    <meta property="og:description"
+        content="Experten im Gerüstbau mit langjähriger Erfahrung und höchsten Sicherheitsstandards.">
+    <meta property="og:image"
+        content="https://abdul-2050.github.io/blaszyk-geruestbau/LOGO-OHNE-HINTERGRUND-psdu9surazmri5sqddghycllkoe1n04jwg66k4f0mg.png">
+    <meta property="og:url" content="https://abdul-2050.github.io/Grass-geruestbau">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Grass-Geruestbau">
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Grass-Geruestbau",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Buschhausener Str. 20-30O,",
+                "addressLocality": "Oberhausen",
+                "postalCode": "46049",
+                "addressCountry": "DE"
+            },
+            "telephone": "+49 172 6234577",
+            "url": "https://abdul-2050.github.io/Grass-geruestbau"
+        }
+        </script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <link rel="stylesheet" href="footer.css">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+    <style>
+        :root {
+            --yellow: #fdb200;
+            --sb-track-color: transparent;
+            --sb-thumb-color: #aaa;
+            --sb-size: 8px;
+        }
+
+        .slider-container {
+            display: flex;
+            width: 100%;
+            /* height: 100vh; */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .slider-container {
+                padding: 32px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .slider-container {
+                padding: 40px;
+            }
+        }
+
+        .bg-circle {
+            width: 90vmin;
+            height: 90vmin;
+            border-radius: 999px;
+            background-color: var(--yellow);
+            position: absolute;
+            top: 60%;
+            right: 50%;
+            opacity: 0.25;
+            transform: translate(50%, -50%) scale(0);
+            z-index: 0;
+            transition: left 500ms, right 500ms, top 500ms, position 500ms, transform 500ms 500ms, opacity 500ms 350ms;
+        }
+
+        @media (min-width: 577px) {
+            .bg-circle {
+                width: 75vmin;
+                height: 75vmin;
+            }
+        }
+
+        .carousel-container {
+            display: block;
+            width: 100%;
+            max-width: 720px;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            width: 100%;
+            height: auto;
+            overflow: auto;
+            border-radius: 20px;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+
+        .carousel-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel-wrapper.dragging {
+            scroll-behavior: auto;
+        }
+
+        .carousel {
+            display: flex;
+            width: auto;
+            width: fit-content;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .carousel-slide {
+            display: flex;
+            width: 144px;
+            min-width: 144px;
+            height: 192px;
+            flex-grow: 0;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #000000;
+            transition-property: width, min-width, height, flex, flex-grow, flex-shrink, flex-basis, opacity;
+            transition-duration: 240ms;
+        }
+
+        .carousel-slide img,
+        .carousel-slide .carousel-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            object-position: center;
+            transition: all 2s;
+        }
+
+        .carousel-content {
+            display: flex;
+            width: 100%;
+            max-height: 100%;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            padding: 16px;
+            color: #fff;
+            transform: translateY(100%);
+            backdrop-filter: blur(2px);
+            transition: all 240ms;
+        }
+
+        .carousel-content h2 {
+            font-size: 1.5rem;
+            margin: 0;
+            transition: all 240ms;
+        }
+
+        .carousel-content p {
+            display: none;
+            font-size: 0.75rem;
+            margin-top: 1em;
+            line-height: 1.5;
+            margin-top: 16px;
+            margin-bottom: 0;
+            transform: translateY(101%);
+            transition-property: width, height, flex, flex-grow, flex-shrink, flex-basis, opacity, transform, margin;
+            transition-duration: 240ms;
+            transition-delay: 50ms;
+        }
+
+        .carousel-slide.loaded img,
+        .carousel-slide.loaded .carousel-image {
+            opacity: 1;
+        }
+
+        .carousel-slide.loaded .carousel-content {
+            transform: translateY(0%);
+        }
+
+        .carousel-slide:hover .carousel-content {
+            backdrop-filter: blur(15px);
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+        }
+
+        .carousel:hover .carousel-slide:not(:hover):not(.active) {
+            opacity: 0.5;
+        }
+
+        button.slider-nav {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            border-radius: 999px;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        button.slider-nav svg {
+            pointer-events: none;
+        }
+
+        button.prev {
+            left: 0;
+            transform: translate(-50%, calc(-50% - 13px));
+        }
+
+        button.next {
+            right: 0;
+            transform: translate(50%, calc(-50% - 13px));
+        }
+
+        .slider-start button.prev {
+            visibility: hidden !important;
+            display: none;
+        }
+
+        .slider-end button.next {
+            visibility: hidden !important;
+        }
+
+        .carousel-scrollbar {
+            margin-top: 16px;
+            padding: 4px 0;
+        }
+
+        .carousel-scrollbar .scrollbar-track {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            border-radius: 999px;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .carousel-scrollbar .scrollbar-thumb {
+            width: 20%;
+            height: 100%;
+            border-radius: 999px;
+            cursor: pointer;
+            position: relative;
+            background-color: rgba(234, 255, 0, 0.8);
+            transition: transform 200ms, background-color 200ms, height 200ms;
+        }
+
+        .carousel-scrollbar .scrollbar-thumb::after {
+            content: "";
+            display: block;
+            height: 16px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        .carousel-scrollbar .scrollbar-thumb:hover {
+            height: 250%;
+        }
+
+        .carousel-scrollbar .scrollbar-thumb.dragging,
+        .carousel-scrollbar .scrollbar-thumb.dragging:hover {
+            background-color: rgba(0, 0, 0, 1);
+            height: 400%;
+        }
+
+        .carousel-scrollbar .scrollbar-thumb.dragging::after {
+            height: 24px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Include the header using JavaScript -->
+    <div id="header-placeholder"></div>
+
+    <script>
+        // Load the header using fetch and insert it into the "header-placeholder" div
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+            });
+    </script>
+
+
+    <section class="section-padding quality">
+        <span class="tag">Kürzliches Projekt</span>
+        <div class="Blaszyk_" style="margin-top: 15px;">
+
+            <div class="img-area">
+                <img src="Leon-Fassadengeruest-768x1024.jpg" alt="" style="width: 100%; border-radius: 8px;">
+            </div>
+
+
+            <div class="txt-area">
+                <h1 class="yellow-gradiant_txt">Ein Beispiel Für Ein Früheres Projekt</h1>
+                <p style="text-align: left;">Unsere Firma spielte eine Schlüsselrolle im Erfolg dieses Projekts, indem
+                    wir hochwertige Gerüstbau-Lösungen bereitstellten, die die Sicherheit und Effizienz auf der
+                    Baustelle maximierten.
+
+                    Unser engagiertes Team von Fachleuten arbeitete eng mit dem Kunden zusammen, um die spezifischen
+                    Anforderungen des Projekts zu verstehen und maßgeschneiderte Lösungen zu entwickeln. Durch enge
+                    Kommunikation und Zusammenarbeit gewährleisteten wir, dass das Gerüst perfekt auf die Bedürfnisse
+                    des Projekts zugeschnitten war.
+
+                    Die Sicherheit aller Beteiligten stand dabei stets an erster Stelle. Wir implementierten strengste
+                    Sicherheitsstandards und sorgten dafür, dass unser Team und die Baustelle bestmöglich geschützt
+                    waren. Dies ermöglichte nicht nur einen reibungslosen Projektverlauf, sondern trug auch dazu bei,
+                    Unfälle zu vermeiden.
+
+                    Unsere Fähigkeit, termingerecht und erfolgreich abzuschließen, hat dazu beigetragen, dass dieses
+                    Projekt ein voller Erfolg wurde. Wir verstehen die Bedeutung von Zeitplänen und Budgets und setzen
+                    alles daran, sie einzuhalten. Die Zufriedenheit des Kunden und das erfolgreiche Abschließen von
+                    Projekten sind für uns von größter Bedeutung, und wir freuen uns darauf, auch in Zukunft dazu
+                    beizutragen.
+                </p>
+                <div>
+                    <div style="display: flex; align-items: center;">
+                        <i class='bx bx-check' style="font-size: 36px; color: rgb(54, 158, 222);"></i>
+                        <p>Gerüstbauexperten</p>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <i class='bx bx-check' style="font-size: 36px; color: rgb(54, 158, 222);"></i>
+                        <p>Gerüstbauexperten</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="section-padding">
+
+        <div style="display: flex; justify-content: center;">
+            <span class="tag">Refrenzen</span>
+        </div>
+
+        <div class="slider-container">
+            <div class="bg-circle"></div>
+            <div class="carousel-container">
+                <button class="slider-nav prev" id="prev"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M15 6l-6 6l6 6"></path>
+                    </svg></button>
+                <button class="slider-nav next" id="next"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 6l6 6l-6 6"></path>
+                    </svg></button>
+                <div class="carousel-wrapper">
+                    <div class="carousel">
+                        <div class="carousel-slide" tabindex="0" data-image-src="backgroud.jpeg">
+                            <!--           <img src="https://images.unsplash.com/photo-1592493235849-553e2b30d952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2140&q=80" alt="" class="carousel-image"> -->
+                            <div class="carousel-content">
+                                <h2>01</h2>
+                                <p>Iran</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" tabindex="0" data-image-src="IMG_4642.png">
+                            <!--           <img src="https://images.unsplash.com/photo-1529154179990-c490c5701e52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" class="carousel-image"> -->
+                            <div class="carousel-content">
+                                <h2>02</h2>
+                                <p>Tehran, Iran</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" tabindex="0" data-image-src="Schutzgerüst.jpeg">
+                            <!--           <img src="https://images.unsplash.com/photo-1524693359256-077720b70144?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60" alt="" class="carousel-image"> -->
+                            <div class="carousel-content">
+                                <h2>03</h2>
+                                <p>Najaf, Iraq</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" tabindex="0"
+                            data-image-src="Arbeits-und-Schutzgeruest-Leon-768x1024.jpg">
+                            <!--           <img src="https://images.unsplash.com/photo-1530311583484-ea8bf4c407fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60" alt="" class="carousel-image"> -->
+                            <div class="carousel-content">
+                                <h2>04</h2>
+                                <p>Najaf to Karbala, Iraq</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" tabindex="0" data-image-src="Sondergerüst.jpeg">
+                            <!--           <img src="https://images.unsplash.com/photo-1577979330904-0363dcd805b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" class="carousel-image"> -->
+                            <div class="carousel-content">
+                                <h2>05</h2>
+                                <p>Iraq</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" tabindex="0" data-image-src="Leon-Fassadengeruest-768x1024.jpg">
+                            <!--           <img src="https://images.unsplash.com/photo-1543847255-555711da0011?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1997&q=80" alt="" class="carousel-image"> -->
+                            <div class="carousel-content">
+                                <h2>06</h2>
+                                <p>Karbala, Iraq</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" tabindex="0" data-image-src="Fassadengerüst.jpeg">
+                            <!--           <img src="https://images.unsplash.com/photo-1579005162638-11c872e1586e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" class="carousel-image"> -->
+                            <div class="carousel-content">
+                                <h2>07</h2>
+                                <p>Karbala, Iraq</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" tabindex="0"
+                            data-image-src="CentrO-Leon-Neu-3-scaled-e1658932060449-768x570.jpg">
+                            <!--           <img src="https://images.unsplash.com/photo-1554058922-d51b58b707f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" class="carousel-image"> -->
+                            <div class="carousel-content">
+                                <h2>08</h2>
+                                <p>Najaf, Iraq</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" tabindex="0"
+                            data-image-src="3640d619-28a9-4d98-be81-1cf9824460fb.png">
+                            <!--           <img src="https://images.unsplash.com/photo-1448318440207-ef1893eb8ac0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2085&q=80" alt="" class="carousel-image"> -->
+                            <div class="carousel-content">
+                                <h2>09</h2>
+                                <p>Najaf to Karbala, Iraq</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" tabindex="0"
+                            data-image-src="LOGO-OHNE-HINTERGRUND-psdu9surazmri5sqddghycllkoe1n04jwg66k4f0mg.png">
+                            <!--           <img src="https://images.unsplash.com/photo-1527126887308-6cdf83c7d844?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" class="carousel-image"> -->
+                            <div class="carousel-content">
+                                <h2>10</h2>
+                                <p>Iraq</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" tabindex="0" data-image-src="Technisches-Rathaus-768x573.jpg">
+                            <!--           <img src="https://images.unsplash.com/photo-1632782532013-bd3f5f9197db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1957&q=80" alt="" class="carousel-image"> -->
+                            <div class="carousel-content">
+                                <h2>11</h2>
+                                <p>Iraq</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" tabindex="0" data-image-src="IMG_4642.png">
+                            <!--           <img src="https://images.unsplash.com/reserve/3waHuaQXRsCuMiUYzARw_IMG_3379.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" class="carousel-image"> -->
+                            <div class="carousel-content">
+                                <h2>12</h2>
+                                <p>Iraq</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-scrollbar">
+                    <div class="scrollbar-track">
+                        <div class="scrollbar-thumb"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add("loading");
+
+            const carousel = document.querySelector(".carousel-wrapper");
+            const carouselSlides = document.querySelectorAll(".carousel-slide");
+            const carouselButtons = document.querySelectorAll("button.slider-nav");
+            const sliderScrollbar = document.querySelector(".carousel-scrollbar");
+            const sliderScrollbarThumb = document.querySelector(
+                ".carousel-scrollbar .scrollbar-thumb"
+            );
+
+            let carouselMaxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+            const resizeScrollbarThumb = () => {
+                sliderScrollbarThumb.style.width = `${(carousel.clientWidth / carousel.scrollWidth) * 100
+                    }%`;
+            };
+
+            resizeScrollbarThumb();
+
+            let interval;
+            let spaceBetween = 8;
+            let slideWidth = 144;
+            let slidesPerView = Math.floor(
+                carousel.clientWidth / (slideWidth + spaceBetween)
+            );
+
+            const hideShowSliderNavButtons = (sliderElement) => {
+                if (sliderElement) {
+                    document.body.classList.toggle(
+                        "slider-start",
+                        sliderElement.scrollLeft - 3 <= 0
+                    );
+                    document.body.classList.toggle(
+                        "slider-end",
+                        sliderElement.scrollLeft + sliderElement.offsetWidth + 3 >=
+                        sliderElement.scrollWidth
+                    );
+                } else {
+                    console.error("sliderElement is not defined");
+                }
+            };
+
+            let startX,
+                thumbPosition,
+                isMouseDown = false;
+
+            const positionScrollbarThumb = () => {
+                const scrollPositionX = carousel.scrollLeft;
+                const thumbPositionX =
+                    (scrollPositionX / carouselMaxScroll) *
+                    (sliderScrollbar.clientWidth - sliderScrollbarThumb.offsetWidth);
+                sliderScrollbarThumb.style.left = `${thumbPositionX}px`;
+            };
+
+            if (carouselSlides && carouselSlides.length > 0) {
+                let intersectionObserver = new IntersectionObserver(
+                    (entries) => {
+                        console.log(entries);
+                        entries.map((slide) => {
+                            console.log("slide.intersectionRatio:", slide.intersectionRatio);
+                            if (slide.isIntersecting) {
+                                let image = new Image();
+                                image.src = slide.target.dataset.imageSrc;
+                                image.className = "carousel-image";
+                                image.onload = (event) => {
+                                    slide.target.prepend(image);
+                                    let index = parseInt(slide.target.dataset.index);
+                                    index = index % slidesPerView;
+                                    window.setTimeout(() => {
+                                        slide.target.classList.add('loaded');
+                                    }, (500 * index));
+                                    intersectionObserver.unobserve(slide.target);
+                                };
+                            }
+                        });
+                    },
+                    {
+                        root: carousel
+                    }
+                );
+
+                carouselSlides.forEach((slide) => {
+                    intersectionObserver.observe(slide);
+                });
+            }
+
+            if (carousel) {
+                carousel.addEventListener("scroll", (event) => {
+                    let sliderWrapper = event.target || carousel;
+                    hideShowSliderNavButtons(sliderWrapper);
+                    positionScrollbarThumb();
+                });
+
+                hideShowSliderNavButtons(carousel);
+            }
+
+            if (carouselButtons && carouselButtons.length > 0) {
+                carouselButtons.forEach((button) => {
+                    button.addEventListener("click", (event) => {
+                        event.preventDefault();
+                        let direction = event.target.id === "prev" ? -1 : 1;
+                        let slidesPerView = Math.floor(
+                            carousel.clientWidth / (slideWidth + spaceBetween)
+                        );
+                        let amountToScroll = (slideWidth + spaceBetween) * slidesPerView;
+                        carousel.scrollLeft += Math.floor(amountToScroll * direction);
+                    });
+                });
+            }
+
+            if (sliderScrollbarThumb) {
+                sliderScrollbarThumb.addEventListener("mousedown", (event) => {
+                    event.preventDefault();
+                    isMouseDown = true;
+                    sliderScrollbarThumb.classList.add("dragging");
+                    carousel.classList.add("dragging");
+                    startX = event.clientX;
+                    thumbPosition = event.target.offsetLeft;
+                });
+
+                document.addEventListener("mousemove", (event) => {
+                    if (!isMouseDown) return;
+                    event.preventDefault();
+                    const deltaX = event.clientX - startX;
+                    const newThumbPosition = thumbPosition + deltaX;
+                    const maxThumbPosition =
+                        sliderScrollbar.getBoundingClientRect().width -
+                        sliderScrollbarThumb.offsetWidth;
+                    const thumbPositionX = Math.max(
+                        0,
+                        Math.min(maxThumbPosition, newThumbPosition)
+                    );
+                    const sliderScrollLeft =
+                        (thumbPositionX / maxThumbPosition) * carouselMaxScroll;
+                    sliderScrollbarThumb.style.left = `${thumbPositionX}px`;
+                    carousel.scrollLeft = sliderScrollLeft;
+                });
+
+                const stopScrolling = (event) => {
+                    event.preventDefault();
+                    isMouseDown = false;
+                    sliderScrollbarThumb.classList.remove("dragging");
+                    carousel.classList.remove("dragging");
+                };
+
+                document.addEventListener("mouseup", stopScrolling);
+            }
+
+            window.onresize = function () {
+                carouselMaxScroll = carousel.scrollWidth - carousel.clientWidth;
+                slideWidth = 144;
+                slidesPerView = Math.floor(carousel.clientWidth / slideWidth);
+                resizeScrollbarThumb();
+                positionScrollbarThumb();
+            };
+        });
+
+        window.onload = function () {
+            if (document.body.classList.contains("loading")) {
+                document.body.classList.add("loaded");
+            } else {
+                setTimeout(() => {
+                    document.body.classList.add("loaded");
+                }, 1000);
+            }
+        };
+
+    </script>
+
+        <!-- Include the header using JavaScript -->
+        <div id="footer-placeholder"></div>
+        <script>
+           // Load the header using fetch and insert it into the "header-placeholder" div
+           fetch('footer.html')
+               .then(response => response.text())
+               .then(data => {
+                   document.getElementById('footer-placeholder').innerHTML = data;
+               })
+               .catch(error => {
+                   console.error('Error loading header:', error);
+               });
+       </script>
+
+
+</body>
+
+</html>
